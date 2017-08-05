@@ -22,3 +22,12 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+$(function() {
+	$(".button-collapse").sideNav();
+	
+	$('.scrollspy').scrollSpy({
+		scrollOffset: 64
+	});
+	
+	$('.parallax').parallax();
+});

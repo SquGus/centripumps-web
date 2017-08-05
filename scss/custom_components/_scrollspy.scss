@@ -1,0 +1,27 @@
+#scrollspy-index {
+	position: fixed;
+	top: calc(50% - 160px - 2em);
+	z-index: 750;
+	
+	.table-of-contents li a {
+		@include transition(color 0.5s ease, border 0.3s ease);
+		
+		color: transparent;
+		padding-left: 27px;
+		border-left: 3px solid color("grey", "darken-1");
+		
+		&.active {
+			border-left: 10px solid $primary-color;
+			color: $primary-color;
+			padding-left: 20px;
+			background-color: white;
+			padding-right: 10px;
+		}
+		
+		&:hover:not(.active) {
+			padding-left: 20px;
+			border-left: 10px solid color("grey", "darken-1");
+			color: color("grey", "darken-1");
+		}
+	}
+}

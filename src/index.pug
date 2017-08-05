@@ -1,6 +1,65 @@
 extends layouts/public.pug
 
+mixin li-section(href, name)
+	li
+		a(
+			href=href
+		)=name
+
 block content
-	.container
+	#scrollspy-index
+		ul.table-of-contents
+			+li-section("#historia", "Nuestra historia")
+			+li-section("#servicios", "Nuestros servicios")
+			+li-section("#trabajos", "Nuestros trabajos")
+			+li-section("#proveedores", "Nuestros proveedores")
+			+li-section("#contacto", "Contactános")
+			+li-section("#ubicacion", "Ubicación")
+	
+	section.section.center-align#index
+		.parallax-container
+			.parallax
+				img(src='img/1.jpg')
+
+	section.section.scrollspy.center-align#historia
 		.row
-			h3 Hello world
+			.col.s12
+				h1 Nuestra 
+					strong historia
+
+	section.section.scrollspy.center-align#servicios.light-blue.skew.odd
+		.row
+			.col.s12
+				h1 Nuestros 
+					strong servicios
+
+	section.section.scrollspy.center-align#trabajos
+		.row
+			.col.s12
+				h1 Nuestros 
+					strong trabajos
+
+	section.section.scrollspy.center-align#proveedores.light-blue.skew.even
+		.row
+			.col.s12
+				h1 Nuestros 
+					strong proveedores
+
+	section.section.scrollspy.center-align#contacto
+		.row
+			.col.s12
+				h1
+					strong Contactános
+
+	section.section.scrollspy.center-align#ubicacion.light-blue.skew.even
+		.row
+			.col.s12
+				h1
+					strong Ubicación
+					
+	
+	section.section.center-align#mapa
+		.row
+			.col.s12
+				h1
+					stron Mapa
